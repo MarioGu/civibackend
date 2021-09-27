@@ -7,7 +7,7 @@ module.exports = {
   coverageProvider: 'babel',
   watchPathIgnorePatterns: ['globalConfig'],
   roots: [
-    '<rootDir>/tests'
+    '<rootDir>/src'
   ],
   // testEnvironment: 'jest-environment-node',
   transform: {

@@ -1,5 +1,5 @@
-import { Messages } from '../../../src/domain/usecases/messages'
-import { MessagesController } from '../../../src/presentation/controllers/messages'
+import { Messages } from '../../domain/usecases/messages'
+import { MessagesController } from './messages'
 
 const makeMessages = (): Messages => {
   class MessagesStub {
