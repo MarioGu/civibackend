@@ -1,6 +1,5 @@
 import { Express } from 'express'
-import { cors } from '../middleswares/cors'
-import { contentType } from '../middleswares/content-type'
+import { cors, contentType } from '../middleswares'
 
 export default (app: Express): void => {
   app.use(cors)
