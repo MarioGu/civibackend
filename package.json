@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/diogo-correia-tec/civi-frontend-mobile-exercise/issues"
   },
-  "homepage": "https://github.com/diogo-correia-tec/civi-frontend-mobile-exercise#readme"
+  "homepage": "https://github.com/diogo-correia-tec/civi-frontend-mobile-exercise#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.2.8"
+  }
 }
