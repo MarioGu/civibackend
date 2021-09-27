@@ -7,7 +7,10 @@ export class MessagesController {
 
   async handle (): Promise<any> {
     try {
-      await this.messages.get()
+      const httpResponse = await this.messages.get()
+      return {
+        statusCode: 200
+      }
     } catch {
       return {
         statusCode: 500

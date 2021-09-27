@@ -31,9 +31,16 @@ describe('Messages Controller', () => {
       throw new Error()
     })
     const httpResponse = await sut.handle()
-    console.log(httpResponse)
     expect(httpResponse).toEqual({
       statusCode: 500
+    })
+  })
+
+  test('Should return 200 on success', async () => {
+    const { sut, messagesStub } = makesut()
+    const httpResponse = await sut.handle()
+    expect(httpResponse).toEqual({
+      statusCode: 200
     })
   })
 })
