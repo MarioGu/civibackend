@@ -11,7 +11,7 @@ export class LocalMessages implements Messages {
       for (let i = 1; i < 21; i++) {      
         let message: MessageModel = {
           id: (20 * start) + i,
-          timestamp: new Date(2020, 5, i + 10, start * i + 5, 0, 0).getTime(),
+          timestamp: new Date(2020, 5, (20 * start) + i, (start+1) * i + 5, 0, 0).getTime(),
           subject: `Assunto ${((20 * start) + i)}`,
           detail: `Detalhe ${((20 * start) + i)}`
         }
