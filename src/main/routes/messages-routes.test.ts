@@ -1,11 +1,11 @@
 import request from 'supertest'
 import app from '../config/app'
 
-describe('Get /messages', () => {
+describe('Post /messages', () => {
   test('Should return 200 on messages', async () => {
     await request(app)
-      .get('/messages')
-      .send()
+      .post('/messages')
+      .send({start: 1})
       .expect(200)
   })
 })

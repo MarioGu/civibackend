@@ -4,5 +4,5 @@ import { adaptRoute } from '../adapters/express-route-adapter'
 import { makeMessagesController } from '../factories/messages'
 
 export default (router: Router): void => {
-  router.get('/messages', adaptRoute(makeMessagesController()))
+  router.post('/messages', adaptRoute(makeMessagesController()))
 }

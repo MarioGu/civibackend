@@ -1,5 +1,5 @@
 import { MessageModel } from '../models/message-model'
 
 export interface Messages {
-  get: () => Promise<MessageModel[]>
+  post: (start: number) => Promise<MessageModel[]>
 }

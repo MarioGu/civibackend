@@ -1,21 +1,26 @@
 import { Messages } from '../../domain/usecases/messages'
+import { HttpRequest, HttpResponse } from '../protocols/http'
 
 export class MessagesController {
   constructor(
     private readonly messages: Messages
   ) {}
 
-  async handle (): Promise<any> {
+  async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
-      const messages = await this.messages.get()
-      return {
+      const {start} = httpRequest.body;
+      const messages = await this.messages.post(start)
+      const httpResponse = (): HttpResponse => ({
         statusCode: 200,
         body: messages
-      }
+      })
+      return httpResponse()
     } catch {
-      return {
-        statusCode: 500
-      }
+      const httpResponse = (): HttpResponse => ({
+        statusCode: 500,
+        body: 'Server error.'
+      })
+      return httpResponse()
     }
   }
 }
